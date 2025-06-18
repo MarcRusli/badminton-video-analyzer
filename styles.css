@@ -17,16 +17,40 @@ body {
     margin-bottom: 50px;
 }
 
-.feature-card {
-    border: none;
+.feature-highlight {
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
     transition: transform 0.3s ease;
+}
+
+.feature-highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.approach-card {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.tech-stack {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
-.feature-card:hover {
-    transform: translateY(-5px);
+.status-card {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
 }
 
 .section-title {
@@ -47,11 +71,16 @@ body {
     background-color: var(--secondary-color);
 }
 
-.tech-stack {
-    background-color: #f8f9fa;
-    padding: 20px;
+.card {
+    border: none;
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
     margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-2px);
 }
 
 .social-links a {
@@ -63,4 +92,24 @@ body {
 
 .social-links a:hover {
     color: var(--secondary-color);
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 } 
