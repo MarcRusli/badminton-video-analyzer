@@ -86,6 +86,104 @@
         </div>
     </section>
 
+    <!-- Training Approach Comparison -->
+    <section class="container mb-5">
+        <h2 class="section-title text-center">Training Approach Comparison</h2>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Training Approach</th>
+                                <th>Pros</th>
+                                <th>Cons</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Raw Footage</strong></td>
+                                <td>
+                                    <ul class="mb-0">
+                                        <li>Captures all visual information</li>
+                                        <li>No preprocessing required</li>
+                                        <li>Preserves original context</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="mb-0">
+                                        <li>Very high computational cost</li>
+                                        <li>May overfit to specific camera angles</li>
+                                        <li>Difficult to generalize across different lighting/backgrounds</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pose Data Only</strong></td>
+                                <td>
+                                    <ul class="mb-0">
+                                        <li>Significantly reduced input size</li>
+                                        <li>More robust to lighting changes</li>
+                                        <li>Faster training and inference</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="mb-0">
+                                        <li>Multiple players in the frame confuses the model</li>
+                                        <li>Similar swings can produce drastically different shot types</li>
+                                        <li>Limited to player-centric features</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Shot Data Only</strong></td>
+                                <td>
+                                    <ul class="mb-0">
+                                        <li>Direct focus on shuttlecock trajectory</li>
+                                        <li>Captures shot physics and patterns</li>
+                                        <li>Less dependent on player visibility</li>
+                                        <li>Good for shot classification</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="mb-0">
+                                        <li>Loses player context and intent</li>
+                                        <li>Misses player-specific shot styles</li>
+                                        <li>Requires accurate shuttlecock tracking</li>
+                                        <li>Different swing techniques can produce similar shot trajectories</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-success">
+                                <td><strong>Pose + Shot Data (Current Approach)</strong></td>
+                                <td>
+                                    <ul class="mb-0">
+                                        <li>Combines player intent with shot execution</li>
+                                        <li>Rich feature set for classification</li>
+                                        <li>Robust to individual component failures</li>
+                                        <li>Enables player-specific analysis</li>
+                                        <li>Balanced computational efficiency</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="mb-0">
+                                        <li>More complex pipeline to maintain</li>
+                                        <li>Requires both pose and shot tracking to work well</li>
+                                        <li>Higher initial development complexity</li>
+                                        <li>Need to handle synchronization between data streams</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-3">
+                    <p class="text-muted"><em>The current approach combines pose and shot data to leverage the strengths of both while mitigating their individual weaknesses.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Dataset Information -->
     <section class="container mb-5">
         <h2 class="section-title text-center">Dataset & Data Processing</h2>
