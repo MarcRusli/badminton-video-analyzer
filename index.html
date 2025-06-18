@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badminton Video Analyzer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">Badminton Video Analyzer</h1>
+            <p class="lead">An advanced machine learning project for analyzing badminton gameplay</p>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="container mb-5">
+        <h2 class="section-title text-center">Project Overview</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <p class="text-center mb-4">
+                    This project combines my passion for badminton with my drive to build machine learning tools that solve real-world problems. The goal is to allow users to upload match footage and receive valuable insights such as:
+                </p>
+                <ul class="list-unstyled text-center mb-4">
+                    <li><i class="fas fa-check-circle text-success me-2"></i>Most common shot patterns per player</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i>Shot types with highest success rates</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i>Detailed performance analytics</li>
+                </ul>
+                <p class="text-center">
+                    The project is currently in active development, with all data preprocessing, pose detection, and ML pipeline work being done personally. While the code is still in development and hasn't been pushed to GitHub, a private repository can be shared upon request.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="container mb-5">
+        <h2 class="section-title text-center">Key Features</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-video fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title">Video Analysis</h5>
+                        <p class="card-text">Real-time processing of badminton gameplay videos with frame sampling and pose extraction</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-brain fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title">ML-Powered Insights</h5>
+                        <p class="card-text">Advanced machine learning algorithms for shot classification and pattern recognition</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
+                        <h5 class="card-title">Performance Metrics</h5>
+                        <p class="card-text">Detailed analytics and performance statistics for players and shot types</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="container mb-5">
+        <h2 class="section-title text-center">Technical Details</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="tech-stack">
+                    <h4 class="mb-4">Technology Stack</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-code me-2"></i>Python</li>
+                        <li><i class="fas fa-robot me-2"></i>OpenPose/MediaPipe for pose estimation</li>
+                        <li><i class="fas fa-camera me-2"></i>VideoBadminton Dataset</li>
+                        <li><i class="fas fa-database me-2"></i>Custom data preprocessing pipeline</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-database me-2"></i>VideoBadminton Dataset</h5>
+                            <p class="card-text">A comprehensive dataset specifically designed for badminton action recognition, featuring:</p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-success me-2"></i>High-quality badminton footage</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Fine-grained action categorization</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>Expert-labeled shot types</li>
+                                <li><i class="fas fa-check-circle text-success me-2"></i>High resolution frames (1280x720px)</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <a href="https://arxiv.org/html/2403.12385v1" target="_blank" class="btn btn-outline-primary">
+                                    <i class="fas fa-file-alt me-2"></i>Read Dataset Paper
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h4 class="mb-3">Current Pipeline</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-film me-2"></i>Clip filtering and frame sampling (6 frames per clip)</li>
+                        <li><i class="fas fa-user me-2"></i>Pose extraction using OpenPose/MediaPipe</li>
+                        <li><i class="fas fa-users me-2"></i>Player identification logic (in progress)</li>
+                        <li><i class="fas fa-tag me-2"></i>Shot-type labeling (partially labeled subset)</li>
+                        <li><i class="fas fa-brain me-2"></i>Classifier training with temporal pose data</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><i class="fas fa-laptop-code me-2"></i>Model Implementation</h5>
+                            <p class="card-text">Check out the shot classifier model implementation in Google Colab</p>
+                            <a href="https://colab.research.google.com/drive/1lkgdK-aLtoYcvj38BnCM9s2N2PoVWG74?usp=sharing" target="_blank" class="btn btn-primary">
+                                <i class="fab fa-google me-2"></i>View Colab Notebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges & Solutions -->
+    <section class="container mb-5">
+        <h2 class="section-title text-center">Challenges & Solutions</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-exclamation-triangle text-warning me-2"></i>Dataset Challenges</h5>
+                        <p class="card-text">The VideoBadminton Dataset presented several challenges:</p>
+                        <ul>
+                            <li>Variable frame counts (1-100+ frames per clip. Not the best to train a model on, say, only 1 frame of data)</li>
+                            <li>Only filmed from one angle (the end goal is to be able to analyze videos from different angles, to make it easy for any amateur badminton player to analyze their own gameplay)</li>
+                            <li>Background is the same for all clips</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-lightbulb text-success me-2"></i>Solutions Implemented</h5>
+                        <ul>
+                            <li>Standardized input by extracting exactly 6 frames per clip. Discard clips with less than 6 frames.</li>
+                            <li>Reduced computational load using pose estimation to extract body keypoints</li>
+                            <li>Developed auxiliary model for player identification based on shuttle trajectory</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results/Visualizations -->
+    <section class="container mb-5">
+        <h2 class="section-title text-center">Results & Visualizations</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="text-center">
+                    <p>Project is currently in development. Results and visualizations will be added as they become available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+        <div class="container text-center">
+            <div class="social-links mb-3">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2024 Badminton Video Analyzer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
